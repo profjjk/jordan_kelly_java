@@ -8,7 +8,7 @@ public class ConverterApplication {
     private static ConverterSwitch converter2 = new ConverterSwitch();
 
     public static void main(String[] args) {
-        // Testing the ConverterIf methods.
+        // Using the ConverterIf methods.
         System.out.println("==== Use ConverterIf Methods ====");
 
         System.out.print("Select month by entering a number from 1 to 12: ");
@@ -22,7 +22,7 @@ public class ConverterApplication {
         System.out.println("You chose " + choiceDayIf + ".");
 
 
-        // Testing the ConverterSwitch methods.
+        // Using the ConverterSwitch methods.
         System.out.println("==== Use ConverterSwitch Methods ====");
 
         System.out.print("Select month by entering a number from 1 to 12: ");
