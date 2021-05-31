@@ -23,7 +23,7 @@ public class ConverterApplication {
 
 
         // Using the ConverterSwitch methods.
-        System.out.println("==== Use ConverterSwitch Methods ====");
+        System.out.println("\n==== Use ConverterSwitch Methods ====");
 
         System.out.print("Select month by entering a number from 1 to 12: ");
         int monthSwitch = scanner.nextInt();
