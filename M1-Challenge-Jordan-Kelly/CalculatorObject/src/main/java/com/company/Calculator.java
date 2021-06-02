@@ -20,12 +20,10 @@ public class Calculator {
     }
 
     public int divideInts(int num1, int num2) {
-        if (num2 != 0) {
-            int result = num1 / num2;
-            System.out.println(num1 + " / " + num2 + " = " + result);
-            return result;
-        } else {
-            System.out.println("Denominator cannot be 0.");
+        try {
+            return num1 / num2;
+        } catch (ArithmeticException e) {
+            System.out.println(e.getMessage());
             return 0;
         }
     }
@@ -49,12 +47,10 @@ public class Calculator {
     }
 
     public double divideDoubles(double num1, double num2) {
-        if (num2 != 0) {
-            double result = num1 / num2;
-            System.out.println(num1 + " / " + num2 + " = " + result);
-            return result;
-        } else {
-            System.out.println("Denominator cannot be 0.");
+        try {
+            return num1 / num2;
+        } catch (ArithmeticException e) {
+            System.out.println(e.getMessage());
             return 0;
         }
     }
