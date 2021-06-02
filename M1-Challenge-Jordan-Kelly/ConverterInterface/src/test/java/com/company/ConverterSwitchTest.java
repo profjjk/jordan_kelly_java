@@ -4,6 +4,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNull;
 
 public class ConverterSwitchTest {
     ConverterSwitch converter;
@@ -27,7 +28,7 @@ public class ConverterSwitchTest {
         assertEquals("October", converter.convertMonth(10));
         assertEquals("November", converter.convertMonth(11));
         assertEquals("December", converter.convertMonth(12));
-        assertEquals(null, converter.convertMonth(13));
+        assertNull(converter.convertMonth(13));
     }
 
     @Test
@@ -39,6 +40,6 @@ public class ConverterSwitchTest {
         assertEquals("Thursday", converter.convertDay(5));
         assertEquals("Friday", converter.convertDay(6));
         assertEquals("Saturday", converter.convertDay(7));
-        assertEquals(null, converter.convertDay(8));
+        assertNull(converter.convertDay(8));
     }
 }
