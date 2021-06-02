@@ -1,94 +1,90 @@
 package com.company;
 
+import java.util.List;
 import java.util.Objects;
 
 public class IceCreamPoS {
-    private double totalPrice;
-    private double price;
-    private double salesTax;
+    // Member variables
+    private String name;
     private int numberOfScoops;
-    private int numberOfToppings;
+    private List<String> toppings;
     private boolean waffleCone;
 
-    public IceCreamPoS(double totalPrice, double price, double salesTax, int numberOfScoops, int numberOfToppings, boolean waffleCone) {
-        this.totalPrice = totalPrice;
-        this.price = price;
-        this.salesTax = salesTax;
+    // Constructor
+    public IceCreamPoS(String name) {
+        this.name = name;
+    }
+
+    public IceCreamPoS(String name, int numberOfScoops, boolean waffleCone) {
+        this.name = name;
         this.numberOfScoops = numberOfScoops;
-        this.numberOfToppings = numberOfToppings;
         this.waffleCone = waffleCone;
     }
 
-    public double getTotalPrice() {
-        return totalPrice;
+    // Getters & setters
+    public String getName() {
+        return name;
     }
-
-    public void setTotalPrice(double totalPrice) {
-        this.totalPrice = totalPrice;
+    public void setName(String name) {
+        this.name = name;
     }
-
-    public double getPrice() {
-        return price;
-    }
-
-    public void setPrice(double price) {
-        this.price = price;
-    }
-
-    public double getSalesTax() {
-        return salesTax;
-    }
-
-    public void setSalesTax(double salesTax) {
-        this.salesTax = salesTax;
-    }
-
     public int getNumberOfScoops() {
         return numberOfScoops;
     }
-
     public void setNumberOfScoops(int numberOfScoops) {
         this.numberOfScoops = numberOfScoops;
     }
-
-    public int getNumberOfToppings() {
-        return numberOfToppings;
+    public List<String> getToppings() {
+        return toppings;
     }
-
-    public void setNumberOfToppings(int numberOfToppings) {
-        this.numberOfToppings = numberOfToppings;
+    public void setToppings(List<String> toppings) {
+        this.toppings = toppings;
     }
-
     public boolean isWaffleCone() {
         return waffleCone;
     }
-
     public void setWaffleCone(boolean waffleCone) {
         this.waffleCone = waffleCone;
     }
 
+    // Override .equals(), .hashCode(), and .toString()
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         IceCreamPoS that = (IceCreamPoS) o;
-        return Double.compare(that.totalPrice, totalPrice) == 0 && Double.compare(that.price, price) == 0 && Double.compare(that.salesTax, salesTax) == 0 && numberOfScoops == that.numberOfScoops && numberOfToppings == that.numberOfToppings && waffleCone == that.waffleCone;
+        return numberOfScoops == that.numberOfScoops && waffleCone == that.waffleCone && Objects.equals(name, that.name) && Objects.equals(toppings, that.toppings);
     }
-
     @Override
     public int hashCode() {
-        return Objects.hash(totalPrice, price, salesTax, numberOfScoops, numberOfToppings, waffleCone);
+        return Objects.hash(name, numberOfScoops, toppings, waffleCone);
     }
-
     @Override
     public String toString() {
         return "IceCreamPoS{" +
-                "totalPrice=" + totalPrice +
-                ", price=" + price +
-                ", salesTax=" + salesTax +
+                "name='" + name + '\'' +
                 ", numberOfScoops=" + numberOfScoops +
-                ", numberOfToppings=" + numberOfToppings +
+                ", toppings=" + toppings +
                 ", waffleCone=" + waffleCone +
                 '}';
+    }
+
+    // Methods
+    public double calculateSubtotal(double pricePerScoop, double pricePerTopping, double waffleConePrice) {
+        double subtotal = 0;
+        if (this.waffleCone) {
+            subtotal = (this.numberOfScoops * pricePerScoop) + (this.toppings.size() * pricePerTopping) + waffleConePrice;
+        } else {
+            subtotal = (this.numberOfScoops * pricePerScoop) + (this.toppings.size() * pricePerTopping);
+        }
+        return subtotal;
+    }
+
+    public double calculateSalesTax(double taxPercentage, double subtotal) {
+        double tax = taxPercentage / 100;
+        return subtotal * tax;
+    }
+    public double calculateTotal(double subtotal, double tax) {
+        return subtotal + tax;
     }
 }
