@@ -86,8 +86,8 @@ public class IceCreamFactory {
         System.out.println("Mixing the ice cream...");
         this.setMixed(true);
     }
-    public void pastuerizeIceCream() {
-        System.out.println("Pastuerizing the ice cream...");
+    public void pasteurizeIceCream() {
+        System.out.println("Pasteurizing the ice cream...");
         this.setPasteurized(true);
     }
     public void prepareForShipment() {

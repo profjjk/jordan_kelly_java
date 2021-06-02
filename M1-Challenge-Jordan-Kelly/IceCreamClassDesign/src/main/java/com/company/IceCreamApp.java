@@ -41,7 +41,7 @@ public class IceCreamApp {
 
         System.out.println("-- Prepare Order --");
         businessOrder.mixIceCream();
-        businessOrder.pastuerizeIceCream();
+        businessOrder.pasteurizeIceCream();
         businessOrder.prepareForShipment();
     }
 }
