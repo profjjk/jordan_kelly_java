@@ -23,15 +23,15 @@ public class Character {
 
     // Character methods
     public void move() {
-        System.out.println("Running...");
+        System.out.println("running...");
     }
 
     public void attack() {
-        System.out.println("Attacking...");
+        System.out.println("attacking...");
     }
 
     public void heal() {
-        System.out.println("Healing...");
+        System.out.println("healing...");
     }
 
     public void decreaseHealth(int attackPower) {
@@ -112,13 +112,11 @@ public class Character {
     // Override toString()
     @Override
     public String toString() {
-        return "Character{" +
-                "name='" + name + '\'' +
-                ", strength=" + strength +
-                ", health=" + health +
-                ", stamina=" + stamina +
-                ", speed=" + speed +
-                ", attackPower=" + attackPower +
-                '}';
+        return this.getName() + ": " +
+                "\n\thealth = " + this.getHealth() +
+                "\n\tstrength = " + this.getStrength() +
+                "\n\tstamina = " + this.getStamina() +
+                "\n\tspeed = " + this.getSpeed() +
+                "\n\tattack power = " + this.getAttackPower();
     }
 }

@@ -9,6 +9,14 @@ public class Constable extends Character {
     }
 
     public void arrest() {
-        System.out.println("Arresting...");
+        System.out.println("arresting...");
+    }
+
+    public String getJurisdiction() {
+        return jurisdiction;
+    }
+
+    public void setJurisdiction(String jurisdiction) {
+        this.jurisdiction = jurisdiction;
     }
 }

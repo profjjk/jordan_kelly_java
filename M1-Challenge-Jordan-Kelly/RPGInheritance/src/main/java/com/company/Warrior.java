@@ -11,4 +11,12 @@ public class Warrior extends Character {
     public void decreaseShieldStrength(int attackPower) {
         this.shieldStrength -= attackPower;
     }
+
+    public int getShieldStrength() {
+        return shieldStrength;
+    }
+
+    public void setShieldStrength(int shieldStrength) {
+        this.shieldStrength = shieldStrength;
+    }
 }
