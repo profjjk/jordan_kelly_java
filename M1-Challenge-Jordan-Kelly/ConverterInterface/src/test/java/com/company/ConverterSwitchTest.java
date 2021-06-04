@@ -28,7 +28,6 @@ public class ConverterSwitchTest {
         assertEquals("October", converter.convertMonth(10));
         assertEquals("November", converter.convertMonth(11));
         assertEquals("December", converter.convertMonth(12));
-        assertNull(converter.convertMonth(13));
     }
 
     @Test
@@ -40,6 +39,11 @@ public class ConverterSwitchTest {
         assertEquals("Thursday", converter.convertDay(5));
         assertEquals("Friday", converter.convertDay(6));
         assertEquals("Saturday", converter.convertDay(7));
+    }
+
+    @Test
+    public void shouldReturnNullIfNumberOutOfBounds() {
+        assertNull(converter.convertMonth(13));
         assertNull(converter.convertDay(8));
     }
 }
