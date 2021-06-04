@@ -5,6 +5,7 @@ import java.util.Objects;
 public class Character {
     // Member variables
     private String name;
+    private String occupation;
     private int strength;
     private int health;
     private int stamina;
@@ -12,8 +13,9 @@ public class Character {
     private int attackPower;
 
     // Constructor
-    public Character(String name, int strength, int health, int stamina, int speed, int attackPower) {
+    public Character(String name, String occupation, int strength, int health, int stamina, int speed, int attackPower) {
         this.name = name;
+        this.occupation = occupation;
         this.strength = strength;
         this.health = health;
         this.stamina = stamina;
@@ -53,6 +55,14 @@ public class Character {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getOccupation() {
+        return occupation;
+    }
+
+    public void setOccupation(String occupation) {
+        this.occupation = occupation;
     }
 
     public int getStrength() {
@@ -96,23 +106,26 @@ public class Character {
     }
 
     // Override equals() & hashCode()
+
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Character character = (Character) o;
-        return strength == character.strength && health == character.health && stamina == character.stamina && speed == character.speed && attackPower == character.attackPower && Objects.equals(name, character.name);
+        return strength == character.strength && health == character.health && stamina == character.stamina && speed == character.speed && attackPower == character.attackPower && Objects.equals(name, character.name) && Objects.equals(occupation, character.occupation);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(name, strength, health, stamina, speed, attackPower);
+        return Objects.hash(name, occupation, strength, health, stamina, speed, attackPower);
     }
 
     // Override toString()
     @Override
     public String toString() {
         return this.getName() + ": " +
+                "\n\toccupation = " + this.getOccupation() +
                 "\n\thealth = " + this.getHealth() +
                 "\n\tstrength = " + this.getStrength() +
                 "\n\tstamina = " + this.getStamina() +

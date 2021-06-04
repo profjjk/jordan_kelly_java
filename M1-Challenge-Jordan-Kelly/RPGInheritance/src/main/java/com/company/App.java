@@ -32,5 +32,6 @@ public class App {
         System.out.println(achilles.getName() + " has a change of heart and yields.");
         System.out.print(javert.getName() + " is now ");
         javert.arrest();
+        System.out.println("... THE END ...");
     }
 }
