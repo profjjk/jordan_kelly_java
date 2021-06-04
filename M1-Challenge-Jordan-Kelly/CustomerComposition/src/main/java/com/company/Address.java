@@ -79,12 +79,13 @@ public class Address {
 
     @Override
     public String toString() {
-        return "Address{" +
-                "street1='" + street1 + '\'' +
-                ", street2='" + street2 + '\'' +
-                ", city='" + city + '\'' +
-                ", state='" + state + '\'' +
-                ", zip='" + zip + '\'' +
-                '}';
+        if (street2 != null) {
+            return street1 + "\n\t" +
+                    street2 + "\n\t" +
+                    city + ", " + state + " " + zip;
+        } else {
+            return street1 + "\n\t" +
+                    city + ", " + state + " " + zip;
+        }
     }
 }
