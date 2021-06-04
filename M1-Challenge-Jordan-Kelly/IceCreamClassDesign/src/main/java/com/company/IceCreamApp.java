@@ -5,8 +5,8 @@ import java.util.Arrays;
 public class IceCreamApp {
     public static void main(String[] args) {
         // PoS Ice Cream
-        System.out.println("==== PoS Ice Cream Example ====");
-        IceCreamPoS myOrder = new IceCreamPoS("Mint Chocolate Chip");
+        System.out.println("==== Store Ice Cream Example ====");
+        IceCreamStore myOrder = new IceCreamStore("Mint Chocolate Chip");
         myOrder.setNumberOfScoops(2);
         myOrder.setToppings(Arrays.asList("whip cream", "hot fudge"));
         myOrder.setWaffleCone(true);

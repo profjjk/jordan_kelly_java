@@ -3,7 +3,7 @@ package com.company;
 import java.util.List;
 import java.util.Objects;
 
-public class IceCreamPoS {
+public class IceCreamStore {
     // Member variables
     private String flavorName;
     private int numberOfScoops;
@@ -11,11 +11,11 @@ public class IceCreamPoS {
     private boolean waffleCone;
 
     // Constructor
-    public IceCreamPoS(String name) {
+    public IceCreamStore(String name) {
         this.flavorName = name;
     }
 
-    public IceCreamPoS(String name, int numberOfScoops, boolean waffleCone) {
+    public IceCreamStore(String name, int numberOfScoops, boolean waffleCone) {
         this.flavorName = name;
         this.numberOfScoops = numberOfScoops;
         this.waffleCone = waffleCone;
@@ -52,7 +52,7 @@ public class IceCreamPoS {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        IceCreamPoS that = (IceCreamPoS) o;
+        IceCreamStore that = (IceCreamStore) o;
         return numberOfScoops == that.numberOfScoops && waffleCone == that.waffleCone && Objects.equals(flavorName, that.flavorName) && Objects.equals(toppings, that.toppings);
     }
     @Override
@@ -61,7 +61,7 @@ public class IceCreamPoS {
     }
     @Override
     public String toString() {
-        return "IceCreamPoS{" +
+        return "IceCreamStore{" +
                 "name='" + flavorName + '\'' +
                 ", numberOfScoops=" + numberOfScoops +
                 ", toppings=" + toppings +
