@@ -12,7 +12,7 @@ public class IceCreamApp {
         myOrder.setWaffleCone(true);
 
         System.out.println("-- Your Order --");
-        System.out.println("Flavor: " + myOrder.getName());
+        System.out.println("Flavor: " + myOrder.getFlavorName());
         System.out.println("Number of scoops: " + myOrder.getNumberOfScoops());
         if (myOrder.isWaffleCone()) System.out.println("Waffle cone: yes");
         if (!myOrder.isWaffleCone()) System.out.println("Waffle cone: no");

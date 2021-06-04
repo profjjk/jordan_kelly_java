@@ -5,28 +5,28 @@ import java.util.Objects;
 
 public class IceCreamPoS {
     // Member variables
-    private String name;
+    private String flavorName;
     private int numberOfScoops;
     private List<String> toppings;
     private boolean waffleCone;
 
     // Constructor
     public IceCreamPoS(String name) {
-        this.name = name;
+        this.flavorName = name;
     }
 
     public IceCreamPoS(String name, int numberOfScoops, boolean waffleCone) {
-        this.name = name;
+        this.flavorName = name;
         this.numberOfScoops = numberOfScoops;
         this.waffleCone = waffleCone;
     }
 
     // Getters & setters
-    public String getName() {
-        return name;
+    public String getFlavorName() {
+        return flavorName;
     }
-    public void setName(String name) {
-        this.name = name;
+    public void setFlavorName(String flavorName) {
+        this.flavorName = flavorName;
     }
     public int getNumberOfScoops() {
         return numberOfScoops;
@@ -53,16 +53,16 @@ public class IceCreamPoS {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         IceCreamPoS that = (IceCreamPoS) o;
-        return numberOfScoops == that.numberOfScoops && waffleCone == that.waffleCone && Objects.equals(name, that.name) && Objects.equals(toppings, that.toppings);
+        return numberOfScoops == that.numberOfScoops && waffleCone == that.waffleCone && Objects.equals(flavorName, that.flavorName) && Objects.equals(toppings, that.toppings);
     }
     @Override
     public int hashCode() {
-        return Objects.hash(name, numberOfScoops, toppings, waffleCone);
+        return Objects.hash(flavorName, numberOfScoops, toppings, waffleCone);
     }
     @Override
     public String toString() {
         return "IceCreamPoS{" +
-                "name='" + name + '\'' +
+                "name='" + flavorName + '\'' +
                 ", numberOfScoops=" + numberOfScoops +
                 ", toppings=" + toppings +
                 ", waffleCone=" + waffleCone +
