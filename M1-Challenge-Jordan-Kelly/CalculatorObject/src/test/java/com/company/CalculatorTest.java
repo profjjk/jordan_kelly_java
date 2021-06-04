@@ -15,46 +15,46 @@ public class CalculatorTest {
 
     @Test
     public void shouldAddTwoIntegers() {
-        assertEquals(2, calc.addInts(1, 1));
+        assertEquals(2, calc.add(1, 1));
     }
 
     @Test
     public void shouldSubtractTwoIntegers() {
-        assertEquals(-29, calc.subtractInts(23, 52));
+        assertEquals(-29, calc.subtract(23, 52));
     }
 
     @Test
     public void shouldMultiplyTwoIntegers() {
-        assertEquals(68, calc.multiplyInts(34, 2));
+        assertEquals(68, calc.multiply(34, 2));
     }
 
     @Test
     public void shouldDivideTwoIntegers() {
-        assertEquals(4, calc.divideInts(12, 3));
+        assertEquals(4, calc.divide(12, 3));
     }
 
     @Test
     public void shouldDivideTwoIntegersAndReturnInteger() {
-        assertEquals(1, calc.divideInts(12, 7));
+        assertEquals(1, calc.divide(12, 7));
     }
 
     @Test
     public void shouldAddTwoDoubles() {
-        assertEquals(5.69, calc.addDoubles(3.4, 2.3), 0.01);
+        assertEquals(5.69, calc.add(3.4, 2.3), 0.01);
     }
 
     @Test
     public void shouldSubtractTwoDoubles() {
-        assertEquals(5.0, calc.subtractDoubles(5.5, 0.5), 0.01);
+        assertEquals(5.0, calc.subtract(5.5, 0.5), 0.01);
     }
 
     @Test
     public void shouldMultiplyTwoDoubles() {
-        assertEquals(29.48, calc.multiplyDoubles(6.7, 4.4), 0.01);
+        assertEquals(29.48, calc.multiply(6.7, 4.4), 0.01);
     }
 
     @Test
     public void shouldDivideTwoDoubles() {
-        assertEquals(4.90, calc.divideDoubles(10.8, 2.2), 0.01);
+        assertEquals(4.90, calc.divide(10.8, 2.2), 0.01);
     }
 }

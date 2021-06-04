@@ -1,54 +1,58 @@
 package com.company;
 
 public class Calculator {
-    public int addInts(int num1, int num2) {
+    public int add(int num1, int num2) {
         int result = num1 + num2;
         System.out.println(num1 + " + " + num2 + " = " + result);
         return result;
     }
 
-    public int subtractInts(int num1, int num2) {
+    public int subtract(int num1, int num2) {
         int result = num1 - num2;
         System.out.println(num1 + " - " + num2 + " = " + result);
         return result;
     }
 
-    public int multiplyInts(int num1, int num2) {
+    public int multiply(int num1, int num2) {
         int result = num1 * num2;
         System.out.println(num1 + " * " + num2 + " = " + result);
         return result;
     }
 
-    public int divideInts(int num1, int num2) {
+    public int divide(int num1, int num2) {
         try {
-            return num1 / num2;
+            int result = num1 / num2;
+            System.out.println(num1 + " / " + num2 + " = " + result);
+            return result;
         } catch (ArithmeticException e) {
             System.out.println(e.getMessage());
             return 0;
         }
     }
 
-    public double addDoubles(double num1, double num2) {
+    public double add(double num1, double num2) {
         double result = num1 + num2;
         System.out.println(num1 + " + " + num2 + " = " + result);
         return result;
     }
 
-    public double subtractDoubles(double num1, double num2) {
+    public double subtract(double num1, double num2) {
         double result = num1 - num2;
         System.out.println(num1 + " - " + num2 + " = " + result);
         return result;
     }
 
-    public double multiplyDoubles(double num1, double num2) {
+    public double multiply(double num1, double num2) {
         double result = num1 * num2;
         System.out.println(num1 + " * " + num2 + " = " + result);
         return result;
     }
 
-    public double divideDoubles(double num1, double num2) {
+    public double divide(double num1, double num2) {
         try {
-            return num1 / num2;
+            double result = num1 / num2;
+            System.out.println(num1 + " / " + num2 + " = " + result);
+            return result;
         } catch (ArithmeticException e) {
             System.out.println(e.getMessage());
             return 0;

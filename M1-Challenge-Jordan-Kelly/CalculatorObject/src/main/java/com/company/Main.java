@@ -9,15 +9,15 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("==== Test Cases ====");
 
-        calc.addInts(1, 1);
-        calc.subtractInts(23, 52);
-        calc.multiplyInts(34, 2);
-        calc.divideInts(12, 3);
-        calc.divideInts(12, 7);
-        calc.addDoubles(3.4, 2.3);
-        calc.multiplyDoubles(6.7, 4.4);
-        calc.subtractDoubles(5.5, 0.5);
-        calc.divideDoubles(10.8, 2.2);
+        calc.add(1, 1);
+        calc.subtract(23, 52);
+        calc.multiply(34, 2);
+        calc.divide(12, 3);
+        calc.divide(12, 7);
+        calc.add(3.4, 2.3);
+        calc.multiply(6.7, 4.4);
+        calc.subtract(5.5, 0.5);
+        calc.divide(10.8, 2.2);
 
         System.out.println("\n==== Integer Arithmetic ====");
 
@@ -26,21 +26,21 @@ public class Main {
         System.out.print("Enter another integer: ");
         int num2 = scanner.nextInt();
 
-        calc.addInts(num1, num2);
-        calc.subtractInts(num1, num2);
-        calc.multiplyInts(num1, num2);
-        calc.divideInts(num1, num2);
+        calc.add(num1, num2);
+        calc.subtract(num1, num2);
+        calc.multiply(num1, num2);
+        calc.divide(num1, num2);
 
         System.out.println("\n==== Double Arithmetic ====");
 
         System.out.print("Enter a double: ");
-        double num3 = scanner.nextInt();
+        double num3 = scanner.nextDouble();
         System.out.print("Enter another double: ");
-        double num4 = scanner.nextInt();
+        double num4 = scanner.nextDouble();
 
-        calc.addDoubles(num3, num4);
-        calc.subtractDoubles(num3, num4);
-        calc.multiplyDoubles(num3, num4);
-        calc.divideDoubles(num3, num4);
+        calc.add(num3, num4);
+        calc.subtract(num3, num4);
+        calc.multiply(num3, num4);
+        calc.divide(num3, num4);
     }
 }
