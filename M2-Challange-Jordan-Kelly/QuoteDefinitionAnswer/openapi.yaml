@@ -1,0 +1,181 @@
+openapi: 3.0.3
+info:
+  title: Api Documentation
+  description: Api Documentation
+  termsOfService: 'urn:tos'
+  contact: {}
+  license:
+    name: Apache 2.0
+    url: 'http://www.apache.org/licenses/LICENSE-2.0'
+  version: '1.0'
+servers:
+  - url: 'http://localhost:8080'
+    description: Inferred Url
+tags:
+  - name: answer-controller
+    description: Answer Controller
+  - name: definition-controller
+    description: Definition Controller
+  - name: quote-controller
+    description: Quote Controller
+paths:
+  /magic:
+    post:
+      tags:
+        - answer-controller
+      summary: getAnswerAndSave
+      operationId: getAnswerAndSaveUsingPOST
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Answer'
+      responses:
+        '201':
+          description: Created
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/Answer'
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not Found
+  /magic/history:
+    get:
+      tags:
+        - answer-controller
+      summary: getHistory
+      operationId: getHistoryUsingGET
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Answer'
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not Found
+  /word:
+    get:
+      tags:
+        - definition-controller
+      summary: getDailyWord
+      operationId: getDailyWordUsingGET
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/Definition'
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not Found
+  /words:
+    get:
+      tags:
+        - definition-controller
+      summary: getAllWords
+      operationId: getAllWordsUsingGET
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Definition'
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not Found
+  /quote:
+    get:
+      tags:
+        - quote-controller
+      summary: getDailyQuote
+      operationId: getDailyQuoteUsingGET
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: '#/components/schemas/Quote'
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not Found
+  /quotes:
+    get:
+      tags:
+        - quote-controller
+      summary: getAllQuotes
+      operationId: getAllQuotesUsingGET
+      responses:
+        '200':
+          description: OK
+          content:
+            '*/*':
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Quote'
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not Found
+components:
+  schemas:
+    Answer:
+      title: Answer
+      type: object
+      properties:
+        answer:
+          type: string
+        id:
+          type: integer
+          format: int32
+        question:
+          type: string
+    Definition:
+      title: Definition
+      type: object
+      properties:
+        definition:
+          type: string
+        id:
+          type: integer
+          format: int32
+        word:
+          type: string
+    Quote:
+      title: Quote
+      type: object
+      properties:
+        author:
+          type: string
+        id:
+          type: integer
+          format: int32
+        quote:
+          type: string
