@@ -1,5 +1,14 @@
 # Challenge Exercises for Cognizant-Java-React Class
 
+## M2 Challenge
+| Exercise Name    | Quick Links |
+| ---------------- | ----------- |
+| Quote of the Day | [Controller](https://github.com/profjjk/jordan_kelly_java/blob/main/M2-Challange-Jordan-Kelly/QuoteDefinitionAnswer/src/main/java/com/company/quotedefinitionanswer/controller/QuoteController.java), [Model](https://github.com/profjjk/jordan_kelly_java/blob/main/M2-Challange-Jordan-Kelly/QuoteDefinitionAnswer/src/main/java/com/company/quotedefinitionanswer/model/Quote.java) |
+| Word of the Day | [Controller](https://github.com/profjjk/jordan_kelly_java/blob/main/M2-Challange-Jordan-Kelly/QuoteDefinitionAnswer/src/main/java/com/company/quotedefinitionanswer/controller/DefinitionController.java), [Model](https://github.com/profjjk/jordan_kelly_java/blob/main/M2-Challange-Jordan-Kelly/QuoteDefinitionAnswer/src/main/java/com/company/quotedefinitionanswer/model/Definition.java) |
+| Magic Eightball | [Controller](https://github.com/profjjk/jordan_kelly_java/blob/main/M2-Challange-Jordan-Kelly/QuoteDefinitionAnswer/src/main/java/com/company/quotedefinitionanswer/controller/AnswerController.java), [Model](https://github.com/profjjk/jordan_kelly_java/blob/main/M2-Challange-Jordan-Kelly/QuoteDefinitionAnswer/src/main/java/com/company/quotedefinitionanswer/model/Answer.java) |
+| [API Docs](https://github.com/profjjk/jordan_kelly_java/blob/main/M2-Challange-Jordan-Kelly/QuoteDefinitionAnswer/openapi.yaml) |
+
+---
 ## M1 Challenge
 | Exercise Name    | Description              | Concepts Demonstrated    |
 | ---------------- | ------------------------ | ------------------------ |
